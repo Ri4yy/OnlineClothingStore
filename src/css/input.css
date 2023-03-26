@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.font-gilroy-regular {
+    font-family: 'Gilroy-Regular', sans-serif;
+}
+.font-gilroy-bold {
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+.font-gilroy-bold {
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+.font-gilroy-medium {
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+.font-gilroy-light {
+    font-family: 'Gilroy-Light', sans-serif;
+}
+.font-gilroy-heavy {
+    font-family: 'Gilroy-Heavy', sans-serif;
+}
+
+.container {
+    @apply max-[1920px]:max-w-[1640px] mx-auto
+}

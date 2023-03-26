@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/OnlineClothingStore/src/assets/css/custom.css"
+    />
+    <link rel="stylesheet" href="/OnlineClothingStore/src/css/main.css" />
+    <title>Пошив</title>
+  </head>
+  <body
+    class="font-gilroy-medium overflow-x-hidden bg-[#FAFAFA] text-[#272525]"
+  >
+    <!-- Шапка -->
+    <header
+      class="flex flex-col overflow-x-hidden bg-[url('../assets/img/bg/bg-480.png')] bg-cover bg-center pb-[120px] md:bg-[url('../assets/img/bg/bg-768.png')] md:pb-[150px] lg:bg-[url('../assets/img/bg/main-bg.png')] lg:pb-[100px] xl:pb-[250px]"
+    >
+      <div class="bg-[#FAFBFD]/40 lg:bg-transparent">
+        <div
+          class="container flex items-center py-5 xs:py-9 md:justify-between lg:gap-7 xl:gap-16 xl:py-[44px]"
+        >
+          <div class="w-[130px] xs:w-[210px] md:min-w-[293px] xl:min-w-[497px]">
+            <a href="/OnlineClothingStore/index.html"
+              ><img
+                src="/OnlineClothingStore/src/assets/img/logo/logo.png"
+                alt="логотип"
+                class=""
+            /></a>
+          </div>
+          <div class="relative hidden w-full lg:flex">
+            <form action="#" class="w-full">
+              <button
+                type="submit"
+                class="absolute top-1/2 left-8 -translate-y-1/2"
+              >
+                <img
+                  src="/OnlineClothingStore/src/assets/img/icon/search.png"
+                  class=""
+                  alt="поиск"
+                />
+              </button>
+              <input
+                class="flex w-full items-center rounded-full border-4 border-black bg-transparent pl-[70px] text-[#8E8E8E] outline-none lg:h-[36px] lg:text-sm xl:h-[60px] xl:text-base"
+                type="text"
+                placeholder="Поиск"
+              />
+            </form>
+          </div>
+          <div class="ml-auto mr-7 flex md:ml-0 md:mr-0 lg:hidden">
+            <button
+              data-te-toggle="modal"
+              data-te-target="#cartModal"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.4095 20.4998C16.0962 20.4998 16.6529 19.9402 16.6529 19.2498V16.7498C16.6529 16.0595 16.0962 15.4998 15.4095 15.4998C14.7228 15.4998 14.1661 16.0595 14.1661 16.7498V19.2498C14.1661 19.9402 14.7228 20.4998 15.4095 20.4998ZM10.4366 20.4998C11.1233 20.4998 11.68 19.9402 11.68 19.2498V16.7498C11.68 16.0595 11.1233 15.4998 10.4366 15.4998C9.74987 15.4998 9.19317 16.0595 9.19317 16.7498V19.2498C9.19317 19.9402 9.74987 20.4998 10.4366 20.4998ZM21.6267 5.49996H19.9107L17.7596 1.18746C17.5805 0.754908 17.1757 0.459416 16.7111 0.421979C16.2465 0.384542 15.8001 0.611448 15.5547 1.00978C15.3092 1.40812 15.306 1.91098 15.5463 2.31246L17.1255 5.49996H8.71995L10.2991 2.31246C10.5495 1.70805 10.2935 1.01184 9.71228 0.716413C9.13108 0.420991 8.42159 0.626465 8.08581 1.18746L5.93469 5.49996H4.21877C2.40438 5.5277 0.87306 6.86398 0.59068 8.66597C0.308301 10.4679 1.35679 12.2128 3.07482 12.8L3.99495 22.125C4.18722 24.0483 5.80235 25.5096 7.72522 25.5H18.1451C20.068 25.5096 21.6831 24.0483 21.8753 22.125L22.7955 12.8C24.5175 12.211 25.5659 10.4592 25.2768 8.65389C24.9878 6.84853 23.4456 5.51599 21.6267 5.49996ZM19.3754 21.8749C19.3113 22.516 18.7729 23.0031 18.132 22.9999H7.71212C7.07117 23.0031 6.53279 22.516 6.4687 21.8749L5.58587 12.9999H20.2582L19.3754 21.8749ZM21.6274 10.4998H4.21951C3.53279 10.4998 2.97609 9.94019 2.97609 9.24984C2.97609 8.55948 3.53279 7.99983 4.21951 7.99983H21.6274C22.3141 7.99983 22.8708 8.55948 22.8708 9.24984C22.8708 9.94019 22.3141 10.4998 21.6274 10.4998Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
+          <a
+            href="#"
+            class="font-gilroy-bold hidden h-9 items-center justify-between whitespace-nowrap rounded-full bg-[#1FAB8A] px-16 text-sm text-white shadow-[0px_6px_25px_rgba(121,129,173,0.45)] transition-all duration-500 hover:bg-[#158c70] hover:text-[#dcdcdc] md:flex xl:h-[60px] xl:text-lg"
+            >+380 630 130 103</a
+          >
+          <div
+            class="hidden items-center whitespace-nowrap lg:flex lg:gap-5 xl:gap-10"
+          >
+            <div class="flex justify-center">
+              <div>
+                <div class="relative" data-te-dropdown-ref>
+                  <button
+                    class="block lg:w-5 xl:w-10"
+                    type="button"
+                    id="dropdownMenuButton2"
+                    data-te-dropdown-toggle-ref
+                    aria-expanded="false"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                  >
+                    <a href="#" class="lg:w-5 xl:w-10"
+                      ><img
+                        src="/OnlineClothingStore/src/assets/img/icon/user.png"
+                        alt="пользователь"
+                    /></a>
+                  </button>
+                  <ul
+                    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                    aria-labelledby="dropdownMenuButton1"
+                    data-te-dropdown-menu-ref
+                  >
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        data-te-toggle="modal"
+                        data-te-target="#signinModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Войти</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        data-te-toggle="modal"
+                        data-te-target="#regModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Регистрация</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        >Профиль</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-xs xl:text-lg">
+              <button class="font-gilroy-bold">RU</button> /
+              <button class="font-gilroy-regular text-[#8E8E8E]">ENG</button>
+            </div>
+          </div>
+          <div class="flex w-7 lg:hidden">
+            <img
+              src="/OnlineClothingStore/src/assets/img/icon/menu.png"
+              alt="меню"
+              id="openMenu"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Бургер меню -->
+      <div
+        class="absolute left-1/2 z-40 flex hidden h-screen w-[calc(100%-40px)] -translate-x-1/2 flex-col items-center bg-white py-9 text-center text-[#8E8E8E]"
+        id="menu"
+      >
+        <div class="relative mb-6 flex w-full items-center justify-center">
+          <div class="flex items-center gap-5 whitespace-nowrap">
+            <div class="flex justify-center">
+              <div>
+                <div class="relative" data-te-dropdown-ref>
+                  <button
+                    class="block w-6"
+                    type="button"
+                    id="dropdownMenuButton2"
+                    data-te-dropdown-toggle-ref
+                    aria-expanded="false"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                  >
+                    <a href="#" class="w-6"
+                      ><img
+                        src="/OnlineClothingStore/src/assets/img/icon/user.png"
+                        alt="пользователь"
+                    /></a>
+                  </button>
+                  <ul
+                    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                    aria-labelledby="dropdownMenuButton1"
+                    data-te-dropdown-menu-ref
+                  >
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        data-te-toggle="modal"
+                        data-te-target="#signinModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Войти</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        data-te-toggle="modal"
+                        data-te-target="#regModal"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        >Регистрация</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                        href="#"
+                        data-te-dropdown-item-ref
+                        >Профиль</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-xs">
+              <button class="font-gilroy-bold">RU</button> /
+              <button class="font-gilroy-regular text-[#8E8E8E]">ENG</button>
+            </div>
+          </div>
+          <div class="absolute right-2">
+            <img
+              src="/OnlineClothingStore/src/assets/img/icon/close.png"
+              alt=""
+              class=""
+              id="close"
+            />
+          </div>
+        </div>
+        <div class="">
+          <ul class="font-gilroy-medium gap-[14px] text-[#272525]">
+            <li><a href="#">Пошив</a></li>
+            <li>
+              <div class="flex justify-center">
+                <div>
+                  <div
+                    class="relative flex h-fit w-full flex-col items-center justify-center"
+                    data-te-dropdown-ref
+                  >
+                    <button
+                      class="dropdownClick w-fit whitespace-nowrap text-[#272525] focus:rounded-md focus:bg-[#272525] focus:px-[14px] focus:py-2 focus:font-bold focus:text-white"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-te-dropdown-toggle-ref
+                      aria-expanded="false"
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                    >
+                      Все товары
+                    </button>
+                    <ul
+                      class="dropdown hidden min-w-max overflow-hidden py-6 [&[data-te-dropdown-show]]:block"
+                      aria-labelledby="dropdownMenuButton1"
+                      style="position: static"
+                      data-te-dropdown-menu-ref
+                    >
+                      <div class="flex gap-8 text-xs">
+                        <ul class="flex flex-col gap-[14px] text-[#8E8E8E]">
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Толстовки</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Свитшоты</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Футболки</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Поло</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Жилетки</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Рюкзаки</a
+                            >
+                          </li>
+                        </ul>
+                        <ul class="flex flex-col gap-[14px] text-[#8E8E8E]">
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Бананки</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Эко-сумки/<br />Шопперы</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Пледы</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Носки</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="focus:font-bold focus:text-[#272525]"
+                              >Маски</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Наборы</a></li>
+            <li><a href="#">Производство</a></li>
+            <li><a href="#">Информация</a></li>
+          </ul>
+        </div>
+        <div class="mt-10 flex flex-col">
+          <a
+            href="mailto:example@gmail.com"
+            class="text-sm text-[#454747] underline"
+            >example@gmail.com</a
+          >
+          <a
+            href="#"
+            class="font-gilroy-bold mt-6 flex h-9 items-center justify-between whitespace-nowrap rounded-full bg-[#1FAB8A] px-9 text-sm text-white shadow-[0px_6px_25px_rgba(121,129,173,0.45)]"
+            >+380 630 130 103</a
+          >
+          <div class="mt-3 flex justify-center gap-4">
+            <a href="#"
+              ><img
+                src="/OnlineClothingStore/src/assets/img/logo/fb.png"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                src="/OnlineClothingStore/src/assets/img/logo/inst.png"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                src="/OnlineClothingStore/src/assets/img/logo/in.png"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden h-[100px] bg-[#FAFBFD]/40 lg:flex">
+        <div class="container flex items-center justify-between xl:gap-[75px]">
+          <nav class="">
+            <ul
+              class="font-gilroy-bold flex items-center text-lg lg:gap-10 xl:gap-20"
+            >
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/sets.html"
+                  class="duration-400 flex h-[100px] items-center justify-center text-[#272525] transition-all hover:relative hover:-mr-[30px] hover:-ml-[30px] hover:rounded-md hover:bg-[#272525] hover:px-10 hover:text-white hover:after:absolute hover:after:-bottom-4 hover:after:left-0 hover:after:h-2 hover:after:w-full hover:after:rounded-full hover:after:bg-[#272525] hover:xl:-mr-10 hover:xl:-ml-10"
+                  >Наборы</a
+                >
+              </li>
+              <li>
+                <div class="group relative inline-block">
+                  <a
+                    href="/OnlineClothingStore/pages/items.html"
+                    class="duration-400 flex h-[100px] items-center justify-center whitespace-nowrap text-[#272525] transition-all hover:relative hover:-mr-[30px] hover:-ml-[30px] hover:rounded-md hover:bg-[#272525] hover:px-10 hover:text-white hover:after:absolute hover:after:-bottom-4 hover:after:left-0 hover:after:h-2 hover:after:w-full hover:after:rounded-full hover:after:bg-[#272525] group-hover:relative group-hover:-mr-[30px] group-hover:-ml-[30px] group-hover:rounded-md group-hover:bg-[#272525] group-hover:px-10 group-hover:text-white group-hover:after:absolute group-hover:after:-bottom-4 group-hover:after:left-0 group-hover:after:h-2 group-hover:after:w-full group-hover:after:rounded-full group-hover:after:bg-[#272525] hover:xl:-mr-10 hover:xl:-ml-10 group-hover:xl:-mr-10 group-hover:xl:-ml-10"
+                    >Все товары</a
+                  >
+                  <ul
+                    class="min-w-32 absolute top-auto z-50 translate-y-[24px] scale-0 transform cursor-pointer rounded-md bg-[#272525] py-2 text-lg font-bold text-white transition duration-150 ease-in-out group-hover:scale-100"
+                  >
+                    <li
+                      class="rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      Одежда
+                    </li>
+                    <li
+                      class="rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      Для офиса
+                    </li>
+                    <li
+                      class="relative rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      <button
+                        class="flex w-full items-center text-left outline-none focus:outline-none"
+                      >
+                        <span class="flex-1 pr-1">Сумки и аксессуры</span>
+                      </button>
+                      <ul
+                        class="min-w-32 absolute top-0 right-0 z-[55] origin-top-left cursor-pointer rounded-md bg-[#272525] py-2 text-lg font-bold text-white transition duration-150 ease-in-out"
+                      >
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Рюкзак
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Сумка
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Бананка
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Шапка
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Кепка
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Маска для сна
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Защитная маска
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Значки/Пины
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Брелоки
+                        </li>
+                        <li
+                          class="py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                        >
+                          Обложка на паспорт
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      Посуда
+                    </li>
+                    <li
+                      class="rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      Отдых
+                    </li>
+                    <li
+                      class="rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      Вкусности
+                    </li>
+                    <li
+                      class="rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      Электроника
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="group relative inline-block">
+                  <a
+                    href="/OnlineClothingStore/pages/sewing.html"
+                    class="duration-400 flex h-[100px] items-center justify-center whitespace-nowrap text-[#272525] transition-all hover:relative hover:-mr-[30px] hover:-ml-[30px] hover:rounded-md hover:bg-[#272525] hover:px-10 hover:text-white hover:after:absolute hover:after:-bottom-4 hover:after:left-0 hover:after:h-2 hover:after:w-full hover:after:rounded-full hover:after:bg-[#272525] group-hover:relative group-hover:-mr-[30px] group-hover:-ml-[30px] group-hover:rounded-md group-hover:bg-[#272525] group-hover:px-10 group-hover:text-white group-hover:after:absolute group-hover:after:-bottom-4 group-hover:after:left-0 group-hover:after:h-2 group-hover:after:w-full group-hover:after:rounded-full group-hover:after:bg-[#272525] hover:xl:-mr-10 hover:xl:-ml-10 group-hover:xl:-mr-10 group-hover:xl:-ml-10"
+                    >Пошив</a
+                  >
+                  <ul
+                    class="min-w-32 absolute top-auto z-50 translate-y-[24px] scale-0 transform cursor-pointer rounded-md bg-[#272525] py-2 text-lg font-bold text-white transition duration-150 ease-in-out group-hover:scale-100"
+                  >
+                    <li
+                      class="relative rounded-sm py-[18px] px-5 hover:bg-[#FFFFFF] hover:text-[#3C336C]"
+                    >
+                      <a
+                        href="/OnlineClothingStore/pages/sewingInner.html"
+                        class="flex w-full items-center text-left outline-none focus:outline-none"
+                      >
+                        <span class="flex-1 pr-1">Внутренний пошив</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/production.html"
+                  class="duration-400 flex h-[100px] items-center justify-center text-[#272525] transition-all hover:relative hover:-mr-[30px] hover:-ml-[30px] hover:rounded-md hover:bg-[#272525] hover:px-10 hover:text-white hover:after:absolute hover:after:-bottom-4 hover:after:left-0 hover:after:h-2 hover:after:w-full hover:after:rounded-full hover:after:bg-[#272525] hover:xl:-mr-10 hover:xl:-ml-10"
+                  >Производство</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/information.html"
+                  class="duration-400 flex h-[100px] items-center justify-center text-[#272525] transition-all hover:relative hover:-mr-[30px] hover:-ml-[30px] hover:rounded-md hover:bg-[#272525] hover:px-10 hover:text-white hover:after:absolute hover:after:-bottom-4 hover:after:left-0 hover:after:h-2 hover:after:w-full hover:after:rounded-full hover:after:bg-[#272525] hover:xl:-mr-10 hover:xl:-ml-10"
+                  >Информация</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="relative flex items-center xl:gap-6">
+            <span
+              class="z-20 w-2/3 text-2xl font-extrabold text-[#3C336C] xl:mr-[150px] xl:w-full xl:text-[38px]"
+              >Шопперы со скидкой - 25%</span
+            >
+            <img
+              src="/OnlineClothingStore/src/assets/img/photo/bag1.png"
+              alt=""
+              class="absolute right-0 z-10 h-[100px] object-cover"
+            />
+          </a>
+        </div>
+      </div>
+      <section
+        class="container relative mt-7 flex flex-col justify-between md:mt-16 md:flex-row"
+      >
+        <div
+          class="relative flex w-full flex-col gap-8 md:w-[60%] lg:w-[70%] xl:w-[55%]"
+        >
+          <h1
+            class="font-gilroy-heavy w-full text-center text-2xl font-black uppercase xs:text-start xs:text-4xl md:text-[28px] lg:lg:text-[48px]"
+          >
+            Современный мерч создает современные бренды
+          </h1>
+          <p
+            class="font-gilroy-regular mt-3 w-full text-center text-[15px] xs:w-2/3 xs:text-start xs:text-base xl:text-lg"
+          >
+            Почему? Потому что это ощутимо и это волнует. Это вовлекает,
+            повышает осведомленность и вызывает эмоции.
+            <span class="hidden lg:block">
+              Наша команда всегда погружается в концепт заказа для того, чтобы
+              предложить вам лучшее решение, при этом оптимизировать затраты. У
+              нас широкий ассортимент готовых моделей, так же изготовим любую
+              продукцию по Вашему дизайну.
+            </span>
+          </p>
+          <div
+            class="absolute -bottom-[130%] left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 min-[400px]:-bottom-[150%] min-[460px]:-bottom-[170%] xs:-bottom-[160%] min-[580px]:-bottom-[200%] min-[712px]:-bottom-[220%] md:relative md:bottom-auto md:left-auto md:translate-x-px md:items-start lg:flex-row lg:items-center lg:gap-10"
+          >
+            <a
+              href="#"
+              class="w-fit whitespace-nowrap rounded-full bg-[#3C336C] px-12 py-5 text-[17px] text-white transition-all duration-500 hover:bg-[#2d2654] hover:text-[#dcdcdc]"
+              >Оставить заявку</a
+            >
+            <p class="font-gilroy-regular text-[#3C336C]">
+              Минимальное кол-во: <span>25</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex w-full justify-center md:w-[40%] md:justify-end lg:w-[30%] xl:w-[45%]"
+        >
+          <img
+            src="/OnlineClothingStore/src/assets/img/photo/hoodie.png"
+            alt=""
+            class="w-[150px] select-none xs:w-[253px] md:w-[339px]"
+          />
+        </div>
+      </section>
+    </header>
+
+    <!-- Товары -->
+    <section class="container flex flex-col">
+      <div class="flex flex-col">
+        <h2 class="font-gilroy-bold text-2xl md:text-[28px] lg:text-[48px]">
+          Мы можем пошить
+        </h2>
+        <span
+          class="font-gilroy-regular mt-2 text-[15px] text-[#454747] xs:text-base md:text-lg"
+        >
+          товары, которые наиболее часто заказывают наши клиенты
+        </span>
+      </div>
+      <div
+        class="mt-8 grid grid-cols-2 gap-x-2 gap-y-3 md:gap-x-[14px] md:gap-y-6 lg:grid-cols-3 lg:gap-y-10 xl:grid-cols-4 xl:gap-x-7"
+      >
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+        <a href="#" class="flex flex-col items-center md:gap-2">
+          <img
+            src="/OnlineClothingStore/src/assets/img/card/mug.png"
+            alt="шапки"
+            class="rounded-2xl"
+          />
+          <span class="font-gilroy-bold text-xl md:text-2xl">Шапки</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Особенности -->
+    <section
+      class="container mt-[90px] grid w-full grid-cols-1 gap-y-10 md:gap-x-[75px] lg:grid-cols-2 lg:gap-y-0 xl:grid-cols-3 xl:gap-x-[100px]"
+    >
+      <div class="flex w-full flex-col gap-5">
+        <h3
+          class="font-gilroy-bold mt-8 text-xl xs:text-start xs:text-2xl lg:text-[36px] lg:leading-10"
+        >
+          Сроки изготовления
+        </h3>
+        <p class="text-[#454747]">
+          Сроки пошива будут зависеть от объема Вашего заказа и сложности
+          моделей. В среднем изготовление корпоративной продукции занимает
+          <span class="font-gilroy-bold"> 10 -18 рабочих дней </span> с момента
+          утверждения всех деталей.
+        </p>
+        <p class="text-[#524983]">
+          Если же Вам нужно "на вчера" - Вы можете согласовать такие условия со
+          своими личным менеджером.
+        </p>
+      </div>
+      <div class="flex w-full flex-col gap-5">
+        <h3
+          class="font-gilroy-bold mt-8 text-xl xs:text-start xs:text-2xl lg:text-[36px] lg:leading-10"
+        >
+          Стоимость
+        </h3>
+        <p class="text-[#454747]">
+          Стоимость производства брендированной продукции на заказ расчитывается
+          индивидуально. Цена зависит от сложности работы, брендирования,
+          материалов, тиража и срочности. Мы подберем для вас оптимальный
+          вариант в соответствии с вашим бюджетом
+        </p>
+      </div>
+      <div class="flex w-full flex-col gap-5">
+        <h3
+          class="font-gilroy-bold mt-8 text-xl xs:text-start xs:text-2xl lg:text-[36px] lg:leading-10"
+        >
+          Брендирование
+        </h3>
+        <p class="text-[#454747]">
+          Стоимость производства брендированной продукции на заказ расчитывается
+          индивидуально. Цена зависит от сложности работы, брендирования,
+          материалов, тиража и срочности. Мы подберем для вас оптимальный
+          вариант в соответствии с вашим бюджетом
+        </p>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer
+      class="h-hit flex translate-y-[150px] flex-col bg-[url('../assets/img/bg/bg5.png')] bg-cover bg-center pt-[125px] pb-6"
+    >
+      <div class="container flex flex-wrap justify-between">
+        <div
+          class="mb-0 flex flex-col justify-between md:mb-7 md:w-full md:flex-row md:items-center lg:w-fit lg:flex-col lg:items-start"
+        >
+          <div class="flex flex-col">
+            <a href="#"
+              ><img
+                src="/OnlineClothingStore/src/assets/img/logo/logo.png"
+                alt=""
+            /></a>
+            <p class="font-gilroy-regular mt-4 text-lg text-[#454747]">
+              Свежее дыхание в корпоративной жизни
+            </p>
+          </div>
+          <div
+            class="mt-9 mb-8 flex flex-row items-center justify-between md:mt-0 md:mb-0 md:flex-col lg:mt-10 lg:items-start"
+          >
+            <div class="flex flex-col">
+              <a href="tel:+380630130103" class="font-gilroy-bold w-fit"
+                >+380 630 130 103</a
+              >
+              <a
+                href="mailto:example@gmail.com"
+                class="font-gilroy-regular w-fit underline"
+                >example@gmail.com</a
+              >
+            </div>
+            <div class="flex gap-5 md:mt-7">
+              <a href="#"
+                ><img
+                  src="/OnlineClothingStore/src/assets/img/logo/fb.png"
+                  alt=""
+              /></a>
+              <a href="#"
+                ><img
+                  src="/OnlineClothingStore/src/assets/img/logo/inst.png"
+                  alt=""
+              /></a>
+              <a href="#"
+                ><img
+                  src="/OnlineClothingStore/src/assets/img/logo/in.png"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full justify-between xs:justify-start xs:gap-16 md:w-fit xl:gap-[135px]"
+        >
+          <div class="flex flex-col">
+            <h5 class="font-gilroy-bold mb-4 text-xl">Категории</h5>
+            <ul class="flex flex-col gap-6 text-lg">
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/sewing.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >Пошив</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/items.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >Все товары</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/sets.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >Наборы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/production.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >Производство</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col">
+            <h5 class="font-gilroy-bold mb-4 text-xl">Информация</h5>
+            <ul class="flex flex-col gap-6 text-lg">
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/information.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >О нас</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/information.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >ЧаВо</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/OnlineClothingStore/pages/information.html"
+                  class="relative text-[#454747] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#454747] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-10 flex w-full flex-col items-center xs:mt-8 xs:items-start md:mt-0 md:w-fit lg:mt-[60px] lg:w-full lg:flex-row lg:items-center lg:justify-between xl:mt-0 xl:w-[18%] xl:flex-col xl:items-start xl:justify-start"
+        >
+          <h5
+            class="font-gilroy-bold mb-4 text-center text-xl xs:text-start lg:mb-0 xl:mb-4"
+          >
+            Связаться с менеджером
+          </h5>
+          <p
+            class="font-gilroy-regular text-center text-xs text-[#8F90A6] xs:text-start xs:text-sm"
+          >
+            Есть вопрос на который не нашли ответ?
+            <span class="block">
+              Оставьте контакт и наш менеджер свяжеться с вами</span
+            >
+          </p>
+          <div class="mt-6 lg:mt-0 xl:mt-6">
+            <form action="#" class="relative w-[277px] xl:w-fit">
+              <input
+                class="w-full rounded-2xl border-2 border-[#272525] bg-transparent p-4 text-sm outline-none"
+                type="text"
+                name="phone"
+                placeholder="Номер телефона"
+              />
+              <button
+                type="submit"
+                class="absolute right-4 top-1/2 flex h-[34px] w-[34px] -translate-y-1/2 items-center justify-center rounded-full bg-[#524983]"
+              >
+                <img
+                  src="/OnlineClothingStore/src/assets/img/icon/enter.png"
+                  alt=""
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mx-auto mt-12 flex flex-col items-center text-[13px] text-[#9FA3B2] xs:flex-row xs:items-start"
+      >
+        <span>© 2022 . All rights reserved.</span>
+        <a href="#" class="underline">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+    <!-- Корзина-кнопка -->
+    <div
+      class="fixed top-1/2 right-5 z-[55] hidden -translate-y-1/2 items-center gap-6 md:flex min-[1600px]:right-10"
+    >
+      <div
+        class="openCart group order-2 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-[#1FAB8A]/30 group-hover:bg-[#139375]/40"
+        id=""
+      >
+        <div
+          class="circleCart relative flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#1FAB8A] transition-all duration-300 group-hover:bg-[#1c8d73]"
+          id=""
+        >
+          <div
+            class="absolute right-0 top-0 flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs"
+          >
+            3
+          </div>
+          <img
+            src="/OnlineClothingStore/src/assets/img/icon/cartBtn.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="popCart relative order-1 flex hidden h-fit gap-7 rounded-2xl bg-white px-6 py-7 shadow-xl"
+        id=""
+      >
+        <img
+          src="/OnlineClothingStore/src/assets/img/icon/close.png"
+          alt=""
+          class="closeCart absolute -right-[5px] -top-[5px] cursor-pointer"
+          id=""
+        />
+        <a
+          href="/OnlineClothingStore/pages/items.html"
+          class="relative text-sm text-black transition-all duration-700 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-black hover:after:w-full hover:after:transition-all hover:after:duration-700"
+          >Продолжить покупки</a
+        >
+        <button
+          data-te-toggle="modal"
+          data-te-target="#cartModal"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          class="relative text-sm text-[#1FAB8A80]/50 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#1FAB8A80] hover:after:w-full hover:after:transition-all hover:after:duration-700"
+        >
+          В корзину
+        </button>
+      </div>
+    </div>
+
+    <!-- Корзина-модальное окно -->
+    <div
+      data-te-modal-init
+      class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative top-10 mx-auto w-[calc(100%-40px)] opacity-0 transition-all duration-300 ease-in-out xs:top-1/2 xs:-translate-y-1/2 lg:w-4/5 xl:w-3/5"
+      >
+        <div
+          class="shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding py-7 px-8 pb-20 text-current shadow-lg outline-none md:px-16"
+        >
+          <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+          >
+            <img
+              src="/OnlineClothingStore/src/assets/img/icon/closeCart.png"
+              alt=""
+              class="w-full"
+            />
+          </button>
+          <div class="flex flex-col gap-5" data-te-modal-body-ref>
+            <span class="text-[28px] font-bold">Корзина</span>
+            <div class="flex flex-col">
+              <div
+                class="relative mt-3 flex w-full flex-col border-b-[1px] border-black pb-[14px] pt-[10px] md:flex-row md:justify-between md:gap-3 lg:gap-8"
+              >
+                <img
+                  src="/OnlineClothingStore/src/assets/img/icon/close.png"
+                  alt=""
+                  class="absolute top-0 right-1/2 translate-x-1/2 cursor-pointer xs:top-[10px] xs:right-0 xs:translate-x-px"
+                />
+                <div
+                  class="flex flex-col items-center gap-3 xs:flex-row md:w-[65%] md:gap-2 lg:w-1/2 lg:gap-7"
+                >
+                  <div
+                    class="flex h-[70px] w-[70px] items-center justify-center rounded-md bg-[#F1F1F8]"
+                  >
+                    <img
+                      src="/OnlineClothingStore/src/assets/img/photo/cartImg.png"
+                      alt=""
+                      class="h-[50px] w-[50px]"
+                    />
+                  </div>
+                  <p class="text-center text-base font-bold xs:text-start">
+                    EL003 Elleven Checkpoint-Friendly Compu-Backpack
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-between xs:flex-row xs:items-end md:w-[35%] md:gap-2 lg:w-1/3 lg:gap-7"
+                >
+                  <div
+                    class="flex w-full items-end justify-center gap-8 md:justify-between md:gap-0"
+                  >
+                    <div
+                      class="flex items-center justify-between gap-5 md:flex-col md:items-start md:justify-start md:gap-0"
+                    >
+                      <div class="flex gap-[10px] text-xs">
+                        <span class="text-xs text-[#9FA3B2]">Цвет</span>
+                        <div class="h-4 w-4 rounded-full bg-[#309F85]"></div>
+                      </div>
+                      <div class="mt-[10px] flex flex-col items-center">
+                        <span class="text-xs text-[#9FA3B2]">Размер</span>
+                        <span class="mt-1 h-4 text-sm leading-none">XS</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                      <label for="qty" class="text-xs text-[#9FA3B2]"
+                        >Кол-во</label
+                      >
+                      <form
+                        action="#"
+                        class="mt-1 flex w-fit items-center gap-3"
+                      >
+                        <button
+                          type="submit"
+                          class="btnMinus flex h-4 w-4 items-center justify-center rounded-[2px] border-[1px] border-[#272525]"
+                        >
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          id="qty"
+                          name="qty"
+                          value="1"
+                          class="qty h-4 w-[20px] outline-none"
+                        />
+                        <button
+                          type="submit"
+                          class="btnPlus flex h-4 w-4 items-center justify-center rounded-[2px] border-[1px] border-[#272525]"
+                        >
+                          +
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <span
+                    class="mt-3 text-center text-lg font-bold leading-none xs:mt-0 xs:text-start"
+                    >$76.43</span
+                  >
+                </div>
+              </div>
+              <div
+                class="relative mt-3 flex w-full flex-col border-b-[1px] border-black pb-[14px] pt-[10px] md:flex-row md:justify-between md:gap-3 lg:gap-8"
+              >
+                <img
+                  src="/OnlineClothingStore/src/assets/img/icon/close.png"
+                  alt=""
+                  class="absolute top-0 right-1/2 translate-x-1/2 cursor-pointer xs:top-[10px] xs:right-0 xs:translate-x-px"
+                />
+                <div
+                  class="flex flex-col items-center gap-3 xs:flex-row md:w-[65%] md:gap-2 lg:w-1/2 lg:gap-7"
+                >
+                  <div
+                    class="flex h-[70px] w-[70px] items-center justify-center rounded-md bg-[#F1F1F8]"
+                  >
+                    <img
+                      src="/OnlineClothingStore/src/assets/img/photo/cartImg.png"
+                      alt=""
+                      class="h-[50px] w-[50px]"
+                    />
+                  </div>
+                  <p class="text-center text-base font-bold xs:text-start">
+                    EL003 Elleven Checkpoint-Friendly Compu-Backpack
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-between xs:flex-row xs:items-end md:w-[35%] md:gap-2 lg:w-1/3 lg:gap-7"
+                >
+                  <div
+                    class="flex w-full items-end justify-center gap-8 md:justify-between md:gap-0"
+                  >
+                    <div
+                      class="flex items-center justify-between gap-5 md:flex-col md:items-start md:justify-start md:gap-0"
+                    >
+                      <div class="flex gap-[10px] text-xs">
+                        <span class="text-xs text-[#9FA3B2]">Цвет</span>
+                        <div class="h-4 w-4 rounded-full bg-[#309F85]"></div>
+                      </div>
+                      <div class="mt-[10px] flex flex-col items-center">
+                        <span class="text-xs text-[#9FA3B2]">Размер</span>
+                        <span class="mt-1 h-4 text-sm leading-none">XS</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                      <label for="qty" class="text-xs text-[#9FA3B2]"
+                        >Кол-во</label
+                      >
+                      <form
+                        action="#"
+                        class="mt-1 flex w-fit items-center gap-3"
+                      >
+                        <button
+                          type="submit"
+                          class="btnMinus flex h-4 w-4 items-center justify-center rounded-[2px] border-[1px] border-[#272525]"
+                        >
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          id="qty"
+                          name="qty"
+                          value="1"
+                          class="qty h-4 w-[20px] outline-none"
+                        />
+                        <button
+                          type="submit"
+                          class="btnPlus flex h-4 w-4 items-center justify-center rounded-[2px] border-[1px] border-[#272525]"
+                        >
+                          +
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <span
+                    class="mt-3 text-center text-lg font-bold leading-none xs:mt-0 xs:text-start"
+                    >$76.43</span
+                  >
+                </div>
+              </div>
+
+              <div
+                class="mt-2 flex flex-col items-center xs:flex-row xs:justify-between md:mt-5"
+              >
+                <span class="text-sm text-[#8E8E8E]">Заказ № 110293</span>
+                <span class="text-lg text-black xs:text-2xl"
+                  >Всего: <span>$ 235.80</span></span
+                >
+              </div>
+              <div class="mt-9 flex flex-col">
+                <form class="flex flex-col gap-7">
+                  <div class="flex flex-col md:w-1/2">
+                    <span class="text-[28px] font-bold">Оформить заказ</span>
+                    <p class="mt-3 text-sm text-[#454747]">
+                      Введите свои контактные данные, и наш менеджер свяжется с
+                      Вами в течении 1 часа
+                    </p>
+                  </div>
+                  <div class="flex w-full flex-col gap-7 md:flex-row">
+                    <input
+                      type="text"
+                      name="name"
+                      class="border-b-[1px] border-[#454747] px-1 outline-none md:w-1/2"
+                      placeholder="Ваше имя"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      class="border-b-[1px] border-[#454747] px-1 outline-none md:w-1/2"
+                      placeholder="Ваша почта"
+                    />
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-7 md:flex-row md:items-end"
+                  >
+                    <input
+                      type="text"
+                      name="phone"
+                      class="h-fit border-b-[1px] border-[#454747] px-1 outline-none md:w-1/2"
+                      placeholder="Ваш телефон"
+                    />
+                    <div class="md:w-1/2">
+                      <button
+                        type="submit"
+                        class="flex w-full items-center justify-center rounded-full bg-[#309F85] py-5 text-white md:w-fit md:px-[90px]"
+                      >
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Вход-модальное окно -->
+    <div
+      data-te-modal-init
+      class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+      id="signinModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative top-1/2 mx-auto w-[90%] -translate-y-1/2 opacity-0 transition-all duration-300 ease-in-out md:w-[500px]"
+      >
+        <div
+          class="shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding py-7 px-8 text-current shadow-lg outline-none"
+        >
+          <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+          >
+            <img
+              src="/OnlineClothingStore/src/assets/img/icon/closeCart.png"
+              alt=""
+              class="w-full"
+            />
+          </button>
+          <div class="flex flex-col gap-5" data-te-modal-body-ref>
+            <div class="flex flex-col">
+              <span class="text-[28px] font-bold">Вход</span>
+              <form class="mt-14 flex w-full flex-col items-center gap-6">
+                <input
+                  type="text"
+                  name="login"
+                  class="w-full border-b-[1px] border-[#454747] px-1 outline-none focus:border-[#6e3773]"
+                  placeholder="Ваш логин"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="w-full border-b-[1px] border-[#454747] px-1 outline-none focus:border-[#6e3773]"
+                  placeholder="Ваша почта"
+                />
+                <input
+                  type="password"
+                  name="psw"
+                  class="h-fit w-full border-b-[1px] border-[#454747] px-1 outline-none focus:border-[#6e3773]"
+                  placeholder="Пароль"
+                />
+                <button
+                  type="submit"
+                  class="flex w-full items-center justify-center rounded-full bg-[#309F85] py-2 text-white xs:w-fit xs:px-[90px]"
+                >
+                  Войти
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Регистрация-модальное окно -->
+    <div
+      data-te-modal-init
+      class="fixed top-0 left-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+      id="regModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative top-1/2 mx-auto w-[90%] -translate-y-1/2 opacity-0 transition-all duration-300 ease-in-out md:w-[500px]"
+      >
+        <div
+          class="shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding py-7 px-8 text-current shadow-lg outline-none"
+        >
+          <button
+            type="button"
+            class="absolute top-2 right-2 z-40"
+            data-te-modal-dismiss
+            aria-label="Close"
+          >
+            <img
+              src="/OnlineClothingStore/src/assets/img/icon/closeCart.png"
+              alt=""
+              class="w-full"
+            />
+          </button>
+          <div class="flex flex-col gap-5" data-te-modal-body-ref>
+            <div class="flex flex-col">
+              <span class="text-[28px] font-bold">Регистрация</span>
+              <form class="mt-14 flex w-full flex-col items-center gap-6">
+                <input
+                  type="text"
+                  name="login"
+                  class="w-full border-b-[1px] border-[#454747] px-1 outline-none focus:border-[#6e3773]"
+                  placeholder="Введите логин"
+                />
+                <input
+                  type="password"
+                  name="psw"
+                  class="h-fit w-full border-b-[1px] border-[#454747] px-1 outline-none focus:border-[#6e3773]"
+                  placeholder="Пароль"
+                />
+                <button
+                  type="submit"
+                  class="flex w-full items-center justify-center rounded-full bg-[#309F85] py-2 text-white xs:w-fit xs:px-[90px]"
+                >
+                  Зарегистрироваться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/OnlineClothingStore/src/assets/libs/jquery.js"></script>
+    <script src="/OnlineClothingStore/src/assets/libs/tailwindElements.js"></script>
+    <script src="/OnlineClothingStore/src/assets/js/custom.js"></script>
+  </body>
+</html>
